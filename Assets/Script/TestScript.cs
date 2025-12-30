@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -75,6 +77,55 @@ public class TestScript : MonoBehaviour
             case false:
                 Debug.Log($"{S1} ve {S2} çift sayılar değildir.");
                 break;
+        }
+    }
+    public void myFunction5()
+    {
+        int i = 0;
+        for(i = 0; i < 10; i++)
+        {
+            Debug.Log("For Döngüsü İterasyonu: " + i);
+        }
+        while(i < 10)
+        {
+            Debug.Log("While Döngüsü İterasyonu: " + i);
+            i++;
+        }
+        do
+        {
+            Debug.Log("Do-While Döngüsü İterasyonu: " + i);
+            i++;
+        } while(i < 10);
+
+        foreach(char c in "Unity")
+        {
+            Debug.Log("Foreach Döngüsü Karakteri: " + c);
+        }
+    }
+    public void myFunction6()
+    {
+        string[] myArray = new string[4] { "Unity", "C#", "Scripting" , "Test" };
+        string[] myArray2 = { "Hello", "World", "from", "Unity" };
+        int[] myArray3 = new int[5];
+        foreach(string str in myArray)
+        {
+            Debug.Log("Array Elemanı: " + str);
+        }
+        for(int i =0; i < myArray2.Length; i++)
+        {
+            Debug.Log("Array2 Elemanı: " + myArray2[i]);
+        }
+        while(myArray.Length > 0)
+        {
+            Debug.Log("Array Uzunluğu: " + myArray.Length);
+            break;
+        }
+        List<int> myList = new List<int>() { 1, 2, 3, 4, 5 };
+        myList.Add(6);
+        myList.Remove(3);
+        for(int i = 0; i < myList.Count; i++)
+        {
+            Debug.Log("List Elemanı: " + myList[i]);
         }
     }
 }
