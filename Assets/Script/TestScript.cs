@@ -1,9 +1,9 @@
-using System;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class TestScript : MonoBehaviour
+namespace myLiblary
+{
+    public class TestScript : MonoBehaviour
 {
     public void myFunction1()
 
@@ -129,3 +129,6 @@ public class TestScript : MonoBehaviour
         }
     }
 }
+}
+
+
